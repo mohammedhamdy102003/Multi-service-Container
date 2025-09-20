@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi Service App</title>
+</head>
+<body>
+  <h1>Welcome to Multi-Service App 🚀</h1>
+  <p id="counter">Loading...</p>
+
+  <script>
+    fetch("http://localhost:5000/visits")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("counter").innerText = "Visits: " + data.visits;
+      });
+  </script>
+</body>
+</html>
+
